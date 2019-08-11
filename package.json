@@ -1,7 +1,7 @@
 {
   "name": "barnard59-shell",
   "version": "0.0.0",
-  "description": "Linked Data pipelines - Shell support",
+  "description": "Shell command support for Barnard59 Linked Data pipelines",
   "main": "index.js",
   "scripts": {
     "test": "standard && jest"
