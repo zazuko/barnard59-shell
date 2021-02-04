@@ -1,0 +1,25 @@
+@base <http://barnard59.zazuko.com/operations/shell/> .
+@prefix code: <https://code.described.at/> .
+@prefix p: <https://pipeline.described.at/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<after> a p:Operation, p:Writable, p:Readable;
+  rdfs:label "Shell (after)";
+  rdfs:comment "Runs the given command in a shell after all chunks have been processed.";
+  code:implementedBy [ a code:EcmaScript;
+    code:link <node:barnard59-shell/after.js>
+  ].
+
+<before> a p:Operation, p:Writable, p:Readable;
+  rdfs:label "Shell (before)";
+  rdfs:comment "Runs the given command in a shell before any chunk has been processed.";
+  code:implementedBy [ a code:EcmaScript;
+    code:link <node:barnard59-shell/begin.js>
+  ].
+
+<shell> a p:Operation, p:Writable, p:Readable;
+  rdfs:label "Shell";
+  rdfs:comment "Runs the given command in a shell and forwards stdin and stdout.";
+  code:implementedBy [ a code:EcmaScript;
+    code:link <node:barnard59-shell>
+  ].
